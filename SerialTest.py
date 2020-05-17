@@ -5,15 +5,10 @@ import serial
 print("running")
 s = serial.Serial('/dev/serial0', 9600)
 
-# Write newline character (ascii 10) to the serial port
-s.write(str.encode('\n'))
+#Write all digits
+s.write(str.encode('0123456789'))
 
-
-# Write carriage return (ascii 13) to the serial port
-s.write(str.encode('\r'))
-
-
-# Write ints to serial
-s.write(49)
+# Write carriage return(13) and newline(10)
+s.write(str.encode('\r\n'))
 
 
